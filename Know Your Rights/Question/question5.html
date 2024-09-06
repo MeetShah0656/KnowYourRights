@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <style>
+        .mcq{
+            position: absolute ;
+            display: flex;
+            margin-top: 35rem;
+            line-height: 30px;
+            left: 50rem;
+            list-style-type: none;
+            color: #fff;
+            transform: scale(1.3);
+            
+        }
+        .mcq ul{
+            text-decoration: none;
+            list-style: none;
+        }
+        /* Hide the default radio button */
+        
+        input[type="radio"] {
+          display: none;
+        }
+    
+        /* Create a custom radio button */
+        input[type="radio"] + label {
+          position: relative;
+          padding-left: 30px;
+          cursor: pointer;
+          display: block; /* Make it block to align vertically */
+          font-size: 18px;
+          margin-bottom: 10px; /* Add spacing between options */
+        }
+    
+        /* Style the circle */
+        input[type="radio"] + label::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%); /* Center the circle vertically */
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 2px solid #000;
+          background-color: #fff;
+        }
+    
+        /* Style the checked radio button */
+        input[type="radio"]:checked + label::before {
+          background-color: #007BFF; /* Blue color when checked */
+          border-color: #007BFF;
+        }
+    
+        /* Inner dot for the checked radio button */
+        input[type="radio"]:checked + label::after {
+          content: "";
+          position: absolute;
+          left: 7px;
+          top: 11px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+    
+        /* Style the submit button */
+        input[type="submit"] {
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #007BFF;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+          background-color: #0056b3;
+        }
+      </style>
+</head>
+<body>
+
+        <header>
+        <nav>
+            <ul>
+                <li><a href="/Quiz/quiz1.html">Take Quiz</a></li>
+                <li><a href="/Constitution.pdf">Basic Rights</a></li>
+                <li><a href="/html/ContactUs.html">Contact Us</a></li>
+                <li><a href="/html/about.html">About</a></li>
+            </ul>
+        </nav>
+        </header>
+        <div class="heading">Below is the question for previous Quiz</div>
+        <div class="question"> What law ensures that every child between the ages of 6 and 14 has the right to free and compulsory education in India?</div>
+        
+            <div class="mcq">
+                <form id="mcqForm">
+                    <ul>
+                        <li>
+                            <input type="radio" id="option1" name="option5" value="1">
+                            <label for="option1">Right to education</label><br>
+            
+                            <input type="radio" id="option2" name="option5" value="2">
+                            <label for="option2">Abolition of untouchability</label><br>
+            
+                            <input type="radio" id="option3" name="option5" value="3">
+                            <label for="option3">Protection of life and personal liberty</label><br>
+            
+                            <!-- Submit button -->
+                          </li>
+                        </ul>
+                      </form>
+                      <button onclick="saveAnswer('option5','/html/Thanks.html' )">Next</button>
+            </div>
+        
+            <script src="../script.js/script.js"></script>
+            
+</body>
+</html>
